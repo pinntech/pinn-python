@@ -1,30 +1,38 @@
 """
-setup.py for pinn-python
+:copyright: (c) 2019 Pinn Technologies, Inc.
+:license: MIT
 """
 
-__author__ = "Pinn Technologies, Inc."
-__email__ = "developers@pinn.ai"
-__copyright__ = "Copyright 2019, Pinn Technologies, Inc."
-
-import os
 from setuptools import setup, find_packages
-
-this_dir = os.path.abspath(os.path.dirname(__file__))
-REQUIREMENTS = filter(None, open(
-    os.path.join(this_dir, 'requirements', 'main.txt')).read().splitlines())
-
 import versioneer
 
 setup(
     name='pinn',
-    author=__author__,
-    author_email=__email__,
+    author='Pinn Technologies, Inc.',
+    author_email='developers@pinn.ai',
     license="MIT",
-    url="https://pinn.readthedocs.org",
+    url="https://github.com/pinntech/pinn-python",
     zip_safe=False,
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    install_requires=list(REQUIREMENTS),
+    install_requires=[
+        'requests >= 2.20; python_version >= "3.0"',
+        'requests[security] >= 2.20; python_version < "3.0"',
+        'pyjwt >= 1.7.1',
+    ],
+    tests_require=[
+        "pytest >= 3.4",
+        "pytest-mock >= 1.7",
+        "pytest-xdist >= 1.22",
+        "pytest-cov >= 2.5",
+    ],
+    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+    project_urls={
+        "Bug Tracker": "https://github.com/pinntech/pinn-python/issues",
+        "Documentation": "https://pinn.readthedocs.org",
+        "Source Code": "https://github.com/pinntech/pinn-python",
+    },
+    keywords='pinn api client library authentication',
     classifiers=[k for k in open('CLASSIFIERS').read().split('\n') if k],
     description='Python bindings for the Pinn REST API',
     long_description=open('README.rst').read() + open('HISTORY.rst').read(),
