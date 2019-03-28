@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 import versioneer
 
-with open('README.md', 'r', 'utf-8') as f:
+with open('README.md', 'r', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
