@@ -1,29 +1,28 @@
 ![Pinn Python Library](docs/_static/pinn-python-logo.png?raw=true)
 ------------------------------------------------------------------
 
-The Pinn library is an easy to use pythonic interface around the Pinn REST API. It provides
-idiomatic and intuitive actions against API resources, and allows for a simplier path to 
-integrating Pinn with your current python project.
+The Pinn library is an easy to use pythonic interface around the Pinn REST API. This software provides idiomatic and intuitive actions against API resources, and allows for a faster path towards integrating Pinn with your current python project.
 
 ## Installation
 
 The easiest way to get started is:
-```bash
+```shell
 pip install --upgrade pinn
 ```
 
 Alternatively you could also install directly from source like so:
-```bash
+```shell
 python setup.py install
 ```
 
 ## Documentation
 
-For a full run down of the library please see the reference documentation here. Otherwise keep reading on for basic usage required for any integration.
+For a full run down of the library please see the reference documentation here, or keep reading on for just the basics.
 
-## Essential Usage
+## Usage
 
-## Testing
+This section details some of the most essential API actions and how to perform them using
+this library.
 
 ## License
 
