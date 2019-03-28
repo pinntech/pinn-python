@@ -24,6 +24,10 @@ For a full run down of the library please see the reference documentation here, 
 This section details some of the most essential API actions and how to perform them using
 this library.
 
+## Changelog
+
+For a detailed account of each release, please refer to the CHANGELOG.
+
 ## License
 
 Copyright (c) 2019 Pinn Technologies, Inc.
