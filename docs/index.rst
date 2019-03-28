@@ -1,10 +1,14 @@
-.. pinn documentation master file, created by
-   sphinx-quickstart on Thu Mar 28 13:09:10 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Documentation
+=============
 
-Welcome to pinn's documentation!
-================================
+.. automodule:: pinn
+    :members:
+
+.. automodule:: pinn.api.user
+    :members:
+
+.. automodule:: pinn.errors
+    :members:
 
 .. toctree::
    :maxdepth: 2
