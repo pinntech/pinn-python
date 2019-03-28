@@ -1,0 +1,9 @@
+include README.md
+include LICENSE.txt
+include HISTORY.md
+include CLASSIFIERS
+include versioneer.py
+recursive-include requirements *.txt
+recursive-include docs/source *
+recursive-include docs *.py Make*
+include pinn/_version.py
