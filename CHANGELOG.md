@@ -8,13 +8,14 @@
 - `Fixed`: Patches that resolve known issues in the API
 
 #### Table of Contents
-- [2019-03-01](#2019-03-01)
-- [2019-01-15](#2019-01-15)
-- [2018-12-01](#2018-12-01)
-- [2018-08-15](#2018-08-15)
+- [2019-03-28](#2019-03-28)
 - [Coming Soon](#comingsoon)
 
 ### 2019-03-28
 --------------
 Version: 0.1.0
 - `Initial Release`
+
+### Coming Soon
+---------------
+- Check back later
