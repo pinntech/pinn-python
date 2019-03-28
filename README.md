@@ -3,7 +3,7 @@
 
 The Pinn Python library is the easiest, fastest and most enjoyable way to integrate
 Pinn into your existing or new python project. This interface around our REST API
-provides a idiomatic, ORM style interface that will make life easy.
+provides an idiomatic, ORM-style usage that will make life easy.
 
 ## Table of Contents
 * [Installation](#installation)
