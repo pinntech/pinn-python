@@ -14,7 +14,7 @@ pecc.egg-info/
 *.swp
 *.egg
 env/
-venv/
+.venv/
 .workon
 dist
 /.mypy_cache/
