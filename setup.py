@@ -6,6 +6,9 @@
 from setuptools import setup, find_packages
 import versioneer
 
+with open('README.md', 'r', 'utf-8') as f:
+    readme = f.read()
+
 setup(
     name='pinn',
     author='Pinn Technologies, Inc.',
@@ -35,6 +38,6 @@ setup(
     keywords='pinn api client library authentication',
     classifiers=[k for k in open('CLASSIFIERS').read().split('\n') if k],
     description='Python bindings for the Pinn REST API',
-    long_description=open('README.rst').read() + open('HISTORY.rst').read(),
+    long_description=readme,
     packages=find_packages(exclude=["tests*"])
 )
