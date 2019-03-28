@@ -1,6 +1,6 @@
 """
-:copyright: (c) 2016 Pinn Technologies, Inc.
-:license: All rights reserved
+:copyright: (c) 2019 Pinn Technologies, Inc.
+:license: MIT
 """
 
 import jwt

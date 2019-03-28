@@ -1,6 +1,6 @@
 """
-:copyright: (c) 2018 Pinn Technologies, Inc.
-:license: All rights reserved
+:copyright: (c) 2019 Pinn Technologies, Inc.
+:license: MIT
 """
 
 import json
@@ -14,7 +14,7 @@ class EnrollmentKey(object):
     endpoint = '/v1/enrollment_keys'
 
     def __init__(self, response):
-        """Initialize a user model with an API response."""
+        """Initialize an enrollment_key model with an API response."""
         self.response = response
         self.enrollment_key_id = response['enrollment_key_id']
         self.user_id = response['user_id']

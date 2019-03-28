@@ -1,6 +1,6 @@
 """
-:copyright: (c) 2016 Pinn Technologies, Inc.
-:license: All rights reserved
+:copyright: (c) 2019 Pinn Technologies, Inc.
+:license: MIT
 """
 
 import requests
@@ -90,4 +90,8 @@ PINN_ERROR_TYPE_MAP = {
 # Non API Errors
 # --------------
 class IDTokenVerificationError(Exception):
+    pass
+
+
+class ConfigurationError(Exception):
     pass

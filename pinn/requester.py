@@ -1,11 +1,13 @@
 """
-:copyright: (c) 2016 Pinn Technologies, Inc.
-:license: All rights reserved
+:copyright: (c) 2019 Pinn Technologies, Inc.
+:license: MIT
 """
 
 import requests
-from . import __title__, __version__
-from .errors import PinnError
+from . import __title__
+from ._version import get_versions
+__version__ = get_versions()['version']
+from .errors import PinnError, ConfigurationError
 
 
 class Requester(object):
@@ -72,7 +74,7 @@ class Requester(object):
         """
         from . import secret_key, api_version
         if secret_key is None:
-            raise RuntimeError('Pinn secret key has not been set, unable to perform requests')
+            raise ConfigurationError('Pinn secret key has not been set, unable to perform requests')
         user_agent = "{}-{}".format(__title__, __version__)
         headers = {'Authorization': 'Bearer ' + secret_key,
                    'User-Agent': user_agent}
