@@ -9,7 +9,7 @@ toy.py
 cover/
 build/
 docs/_build
-pecc.egg-info/
+pinn.egg-info/
 *.pyc
 *.swp
 *.egg
