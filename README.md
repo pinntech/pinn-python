@@ -6,7 +6,6 @@
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PyPI status](https://img.shields.io/pypi/status/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
-[![Contact Us](https://img.shields.io/badge/Pinn-Contact Us-green.svg)](https://pinn.ai/contact)
 
 
 The Pinn Python library is the easiest, fastest and most enjoyable way to integrate
