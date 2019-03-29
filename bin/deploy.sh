@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 setup.py test
-python3 setup.py build sdist bdist_egg upload
+python setup.py test sdist bdist_wheel
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*

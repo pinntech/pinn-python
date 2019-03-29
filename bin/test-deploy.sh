@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+python setup.py test sdist bdist_wheel
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
