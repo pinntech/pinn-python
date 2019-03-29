@@ -60,6 +60,7 @@ class APIError(PinnError):
 
 
 class APIConnectionError(PinnError):
+    """The Pinn host is unreachable, you can and should retry this request"""
     pass
 
 
