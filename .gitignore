@@ -13,6 +13,7 @@ pinn.egg-info/
 *.pyc
 *.swp
 *.egg
+.eggs
 env/
 .venv/
 .workon
