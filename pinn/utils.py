@@ -36,3 +36,7 @@ class IDToken(object):
         if not set(amr).issubset(set(claims['amr'])):
             raise IDTokenVerificationError('`amr` was invalid and did not contain all methods required. Requested: {}, Received: {}'.format(amr, claims['amr']))
         return claims
+
+
+class WebhookSignature(object):
+    pass
