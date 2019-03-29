@@ -1,11 +1,11 @@
 ![Pinn Python Library](docs/_static/pinn-python-logo.png?raw=true)
 ------------------------------------------------------------------
 
-[![PyPI version shields.io](https://img.shields.io/pypi/v/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
-[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
-[![PyPI status](https://img.shields.io/pypi/status/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
-[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/pinn.svg)](https://pypi.python.org/pypi/pinn/)
+[![PyPI license](https://img.shields.io/pypi/l/pinn.svg)](https://pypi.python.org/pypi/pinn/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/pinn.svg)](https://pypi.python.org/pypi/pinn/)
+[![PyPI status](https://img.shields.io/pypi/status/pinn.svg)](https://pypi.python.org/pypi/pinn/)
+[![Documentation Status](https://readthedocs.org/projects/pinn/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
 
 
 The Pinn Python library is the easiest, fastest and most enjoyable way to integrate
