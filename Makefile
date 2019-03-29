@@ -17,6 +17,7 @@ clean:
 dev:
 	pip install coverage
 	pip install codecov
+	pip install flake8
 	pip install pylint
 	pip install twine
 	pip install sphinx
