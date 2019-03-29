@@ -14,3 +14,12 @@ def test_configuration_error():
         pinn.User.create()
     except pinn.errors.ConfigurationError:
         pass
+
+
+def test_authentication_error():
+    import pinn
+    pinn.secret_key = 'foo'
+    try:
+        pinn.User.create()
+    except pinn.errors.AuthenticationError:
+        pass
