@@ -1,11 +1,18 @@
 language: python
 python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
-  - "3.6"
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
 install:
-  - make dev
+- make dev
 script:
-  - pytest
-
+- pytest
+deploy:
+  provider: pypi
+  skip_existing: true
+  on:
+    tags: true
+  user: dmwesterhoff
+  password:
+    secure: XaOptHLnYsl+0pXuC29O8pMGDb0f6F1eIDJQE5UEnXmJhUz6YgYNYKPU0TBJtfZSkjW+qhGAHceJw0JLkL1X8zmcVpJMwuXMTocJ4yG7UQsiM3x7yrdv9HqBhHqbXW/3nUubbTVMJWA2ntOlbDkIgNC39sOfsP5GtCqWgSYQJKoGEKML71+xe/NIsG80OPZYDwFL3HHkGtQhRwK7fIeTKe91jGMu3CkHtCBQDhdO7T+CMIU/fQbcnkcIK9vi59zzJhBFMIA8jD8s+S2vzf80OxYt3pN5eMEPvfZZxCwwqZJ1E7PVKP1f7aX1jeCKIxm4F59icDr/X3/ETkXzpusTty6mKCi2ie7yKy/0TcEgvD4wceR2GwwL6vRKyEYcAxQLUqN3rOtmq26yRQIaOytfV2wppVmE6c0kQW3LoD5+O99IjxftZ0k+s9KkFLJwXxI8dzCG3GxD3DfnDk0alMRWJMLP5ZZGg4WFl+qKZwBSkN0zG///aYyD4E2MEKMg82b2Kek9CEczHPffocLyrufnYQA6q8QcV9Qj066i3fGExp19tF1M6pW48RuDQN1ndPnwPI0W9k2shKpiXzrF3ShrjQKlAPrT1s6R86xAjA2yro+1eJvKvsiBsqBYJyZmo1f7thbQpxCW244Yx9XziIH8QcwSu8u4Gy1s/w7QIhwjGT0=
