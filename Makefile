@@ -37,7 +37,7 @@ test:
 	flake8 pinn
 
 lint:
-	flake8 pinn
+	flake8 --config setup.cfg pinn
 
 deploy:
 	python setup.py test sdist bdist_wheel

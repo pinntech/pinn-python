@@ -38,9 +38,12 @@ class IDToken(object):
             raise IDTokenVerificationError('`iss` claim not provided in JWT')
         if claims['iss'] != api_host:
             raise IDTokenVerificationError(
-                '`iss` claim provided was {} and was expected to be {}'.format(claims['iss'], api_host))
+                '`iss` claim provided was {} and was expected to be {}'.format(claims['iss'],
+                                                                               api_host))
         if not set(amr).issubset(set(claims['amr'])):
-            raise IDTokenVerificationError('`amr` was invalid and did not contain all methods required. Requested: {}, Received: {}'.format(amr, claims['amr']))
+            raise IDTokenVerificationError(
+                '`amr` was invalid and did not contain all methods required.' +
+                'Requested: {}, Received: {}'.format(amr, claims['amr']))
         return claims
 
 

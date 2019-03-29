@@ -25,7 +25,9 @@ class Pager(object):
         if self.current.has_more:
             self.current = List(Requester.get(self.current.url,
                                               params={'limit': self.current.limit,
-                                                      'starting_after': self.current.ended_at}), self.current.cls, self.current.limit)
+                                                      'starting_after': self.current.ended_at}),
+                                self.current.cls,
+                                self.current.limit)
             return self.current
         raise StopIteration
 

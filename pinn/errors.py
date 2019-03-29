@@ -15,7 +15,7 @@ class PinnError(Exception):
             self._message = error["message"]
             self.code = error["code"]
             self.type = error["type"]
-        except:
+        except:  # NOQA FIXME
             self._message = response.reason
             self.code = response.status_code
             self.type = PINN_ERROR_CODE_MAP[response.status_code]
