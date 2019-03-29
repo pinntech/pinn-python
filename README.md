@@ -1,6 +1,16 @@
 ![Pinn Python Library](docs/_static/pinn-python-logo.png?raw=true)
 ------------------------------------------------------------------
 
+[![PyPI version shields.io](https://img.shields.io/pypi/v/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI status](https://img.shields.io/pypi/status/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Contact Us](https://img.shields.io/badge/Contact-Us-green.svg)](https://shields.io/)
+
+
 The Pinn Python library is the easiest, fastest and most enjoyable way to integrate
 Pinn into your existing or new python project. This interface around our REST API
 provides an idiomatic, ORM-style usage that will make life easy.
