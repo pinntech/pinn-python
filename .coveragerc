@@ -1,2 +1,3 @@
 [run]
 source = ./pinn
+omit = ./pinn/_version.py
