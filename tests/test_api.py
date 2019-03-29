@@ -23,3 +23,7 @@ def test_authentication_error():
         pinn.User.create()
     except pinn.errors.AuthenticationError:
         pass
+
+
+def test_not_found_error():
+    pass
