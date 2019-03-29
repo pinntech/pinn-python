@@ -4,16 +4,6 @@ python:
 - '3.4'
 - '3.5'
 - '3.6'
-before_install:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-before_script:
-  - ./cc-test-reporter before-build
-after_script:
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter format-coverage; fi
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then aws s3 sync coverage/ "s3://s3-bucket/coverage/$TRAVIS_BUILD_NUMBER"; fi
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then aws s3 sync "s3://s3-bucket/coverage/$TRAVIS_BUILD_NUMBER" coverage/; fi
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter sum-coverage | ./cc-test-reporter upload-coverage; fi
 install:
 - make dev
 script:

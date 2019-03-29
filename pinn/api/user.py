@@ -56,22 +56,6 @@ class User(object):
         return List(response, User, limit)
 
     @classmethod
-    def list_devices(cls, user_id, limit=None, starting_after=None):
-        """List created Pinn user's devices."""
-        endpoint = cls.endpoint + '/' + user_id + '/devices'
-        response = Requester.get(endpoint, params={'limit': limit,
-                                                   'starting_after': starting_after})
-        return List(response, Device, limit)
-
-    @classmethod
-    def list_logs(cls, user_id, limit=None, starting_after=None):
-        """List created Pinn users."""
-        endpoint = cls.endpoint + '/' + user_id + '/logs'
-        response = Requester.get(endpoint, params={'limit': limit,
-                                                   'starting_after': starting_after})
-        return List(response, Log, limit)
-
-    @classmethod
     def retrieve(cls, user_id):
         """Retrieve a user with a provided user ID."""
         return User(Requester.get(cls.endpoint + '/' + user_id))
@@ -90,3 +74,19 @@ class User(object):
     def delete(cls, user_id):
         """Delete a user with the given user ID."""
         return Requester.delete(cls.endpoint + '/' + user_id)
+
+    @classmethod
+    def list_devices(cls, user_id, limit=None, starting_after=None):
+        """List created Pinn user's devices."""
+        endpoint = cls.endpoint + '/' + user_id + '/devices'
+        response = Requester.get(endpoint, params={'limit': limit,
+                                                   'starting_after': starting_after})
+        return List(response, Device, limit)
+
+    @classmethod
+    def list_logs(cls, user_id, limit=None, starting_after=None):
+        """List created Pinn users."""
+        endpoint = cls.endpoint + '/' + user_id + '/logs'
+        response = Requester.get(endpoint, params={'limit': limit,
+                                                   'starting_after': starting_after})
+        return List(response, Log, limit)

@@ -24,8 +24,13 @@ __copyright__ = 'Copyright 2019 Pinn Technologies, Inc.'
 # Configuration Variables
 # -----------------------
 secret_key = os.environ.get('PINN_SECRET_KEY', None)
+"""str: The Pinn secret key value, used to authenticate API requests."""
+
 api_host = os.environ.get('PINN_API_HOST', 'https://pinnapis.com')
+"""str: Pinn API host, defaults to production Pinn-hosted service."""
+
 api_version = os.environ.get('PINN_API_VERSION', None)
+"""str: Pinn API verision string, set this to use a specific API version."""
 
 # API
 # ---
