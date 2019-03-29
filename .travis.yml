@@ -19,6 +19,7 @@ install:
 script:
 - flake8 pinn
 - coverage run -m pytest
+- coverage report
 deploy:
   provider: pypi
   skip_existing: true
