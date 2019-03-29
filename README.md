@@ -6,6 +6,7 @@
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/pinn.svg)](https://pypi.python.org/pypi/pinn/)
 [![PyPI status](https://img.shields.io/pypi/status/pinn.svg)](https://pypi.python.org/pypi/pinn/)
 [![Documentation Status](https://readthedocs.org/projects/pinn/badge/?version=latest)](http://ansicolortags.readthedocs.io/?badge=latest)
+[![Build Status](https://travis-ci.com/pinntech/pinn-python.svg?branch=master)](https://travis-ci.com/pinntech/pinn-python)
 
 
 The Pinn Python library is the easiest, fastest and most enjoyable way to integrate
