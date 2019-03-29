@@ -18,7 +18,7 @@ install:
 - make dev
 script:
 - flake8 pinn
-- pytest
+- coverage run -m pytest
 deploy:
   provider: pypi
   skip_existing: true
