@@ -40,5 +40,6 @@ setup(
     classifiers=[k for k in open('CLASSIFIERS').read().split('\n') if k],
     description='Python bindings for the Pinn REST API',
     long_description=readme,
+    long_description_content_type='text/markdown',
     packages=find_packages(exclude=["tests*"])
 )
