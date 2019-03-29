@@ -34,7 +34,7 @@ package:
 
 test:
 	pytest
-	flake8 pinn
+	make lint
 
 lint:
 	flake8 --config setup.cfg pinn
