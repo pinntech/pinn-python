@@ -12,10 +12,16 @@ class IDToken(object):
 
     @staticmethod
     def verify(id_token, amr):
-        """
-        Validates the signature and ensures all amr values are present in the token.
+        """Verify a new incoming Pinn ID token value.
 
-        If successful, a pinn.User object is returned.
+        Extended description of function.
+
+        Args:
+            id_token (str): The ID Token received from a Pinn SDK
+            amr (list): List of required authentication methods required
+
+        Returns:
+            dict: A dictionary of the verified claims
         """
         from . import secret_key, api_host
         if secret_key is None:
