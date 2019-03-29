@@ -1,5 +1,5 @@
-![Pinn Python Library](docs/_static/pinn-python-logo.png?raw=true)
-------------------------------------------------------------------
+![Pinn Python Library](https://github.com/pinntech/pinn-python/raw/master/docs/_static/pinn-python-logo.png)
+---
 
 [![PyPI version shields.io](https://img.shields.io/pypi/v/pinn.svg)](https://pypi.python.org/pypi/pinn/)
 [![PyPI license](https://img.shields.io/pypi/l/pinn.svg)](https://pypi.python.org/pypi/pinn/)
