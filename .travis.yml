@@ -10,7 +10,7 @@ before_install:
 before_script:
   - ./cc-test-reporter before-build
 after_script:
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter format-coverage -t simplecov -o ./coverage/codeclimate.$CI_NODE_INDEX.json ./coverage/spec/.resultset.json; fi
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter format-coverage; fi
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then aws s3 sync coverage/ "s3://s3-bucket/coverage/$TRAVIS_BUILD_NUMBER"; fi
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then aws s3 sync "s3://s3-bucket/coverage/$TRAVIS_BUILD_NUMBER" coverage/; fi
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter sum-coverage --output - --parts $CI_NODE_TOTAL coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage --input -; fi
