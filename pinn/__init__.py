@@ -42,6 +42,6 @@ from .utils import IDToken  # NOQA
 
 # Versioning
 # ----------
-from ._version import get_versions
+from ._version import get_versions  # NOQA
 __version__ = get_versions()['version']
 del get_versions
