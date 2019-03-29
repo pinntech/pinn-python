@@ -8,7 +8,6 @@ before_install:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
 before_script:
-  - bin/setup
   - ./cc-test-reporter before-build
 after_script:
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter format-coverage -t simplecov -o ./coverage/codeclimate.$CI_NODE_INDEX.json ./coverage/spec/.resultset.json; fi
@@ -18,6 +17,7 @@ after_script:
 install:
 - make dev
 script:
+- flake8 pinn
 - pytest
 deploy:
   provider: pypi
