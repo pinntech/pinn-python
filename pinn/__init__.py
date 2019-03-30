@@ -1,16 +1,5 @@
-"""
-pinn
-----
-Python bindings for the Pinn REST API
-
-Get started with:
-    >>> import pinn
-    >>> pinn.secret_key = "sk_eAtrbzTaZMSaGGCPzToL804DjxNMnudO"
-    >>> pinn.User.create()
-
-:copyright: (c) 2019 Pinn Technologies, Inc.
-:license: MIT
-"""
+# :copyright: (c) 2019 Pinn Technologies, Inc.
+# :license: MIT
 
 import os
 
@@ -38,7 +27,7 @@ from .api.app import App  # NOQA
 from .api.device import Device  # NOQA
 from .api.enrollment_key import EnrollmentKey  # NOQA
 from .api.event import Event  # NOQA
-from .api.health import Health  # NOQA
+from .api.health import healthy  # NOQA
 from .api.log import Log  # NOQA
 from .api.recovery_key import RecoveryKey  # NOQA
 from .api.user import User  # NOQA

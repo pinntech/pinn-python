@@ -3,25 +3,21 @@
 :license: MIT
 """
 
-import json
 from ..requester import Requester
+from ..errors import PinnError
 
 
-class Health(object):
-    """Healthy."""
+def healthy():
+    """Perform a health check against the configured Pinn host.
 
-    OBJECT_NAME = 'health'
+    Returns:
+        bool: True if host is available, False otherwise
+    """
+
     endpoint = '/health'
 
-    def __init__(self, response):
-        """Initialize a user model with an API response."""
-        pass
-
-    def __str__(self):
-        data = self.dump()
-        return json.dumps(data, indent=4, sort_keys=True, separators=(',', ': '))
-
-    @classmethod
-    def retrieve(cls):
-        """Retrieve a health."""
-        return Requester.get(cls.endpoint)
+    try:
+        Requester.get(endpoint)
+        return True
+    except PinnError:
+        return False

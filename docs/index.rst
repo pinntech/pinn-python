@@ -38,16 +38,16 @@ Now you're all set to start making API calls.
 API Reference
 =============
 
+.. automodule:: pinn
+    :members: secret_key, api_host, api_version
+
 Resources
 ---------
 
 .. autoclass:: pinn.User
 
-.. automodule:: pinn
-    :members:
-
-.. automodule:: pinn.api.user
-    :members:
+Errors
+------
 
 .. automodule:: pinn.errors
     :members:
@@ -56,7 +56,13 @@ Resources
    :maxdepth: 2
    :caption: Contents:
 
+Utilities
+---------
 
+Other
+-----
+
+.. autofunction:: pinn.healthy
 
 Indices and tables
 ==================

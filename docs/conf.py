@@ -87,10 +87,12 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 html_theme_options = {
+    'logo_only': True,
+    'style_nav_header_background': '#FFFFFF',
+    'display_version': False,
 }
 
-html_logo = './_static/pinn-python-square-logo.png'
-html_title = 'pinn-python'
+html_logo = './_static/pinn-python-logo-small.png'
 html_favicon = './_static/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
