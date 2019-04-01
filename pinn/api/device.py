@@ -9,25 +9,42 @@ from ..requester import Requester
 
 
 class Device(object):
-    """Methods to create, list, retrieve, update or delete keys."""
+    """Device resource and interface.
+
+    Attributes:
+        response (dict): Underlying dictionary response
+        object (str): Identifier for the resource
+        device_id (str): Unique ID for the device
+        user_id (str): ID of the user the device is registered to
+        created_at (int): Unix timestamp in seconds for when the app was created
+        updated_at (int): Unix timestamp in seconds for when the app was last updated
+        name (str): Human readable name of the device
+        make (str): Manufacturer make of the device
+        model (str): Model identifier of the device
+        platform (str): Either `ios` or `android`
+        platform_version (str): Last recorded platform version of the device
+        framework_version (str): Last recorded framework version for the device
+        push_notification_token (str, optional): Device APNS or FCM push notification token
+    """
 
     OBJECT_NAME = 'key'
     endpoint = '/v1/devices'
 
     def __init__(self, response):
         """Initialize a user model with an API response."""
+        self.response = response
+        self.object = response['object']
         self.device_id = response['device_id']
         self.user_id = response['user_id']
         self.created_at = response['created_at']
         self.updated_at = response['updated_at']
-        self.object = response['object']
         self.name = response['name']
         self.make = response['make']
         self.model = response['model']
         self.platform = response['platform']
         self.platform_version = response['platform_version']
         self.framework_version = response['framework_version']
-        self.push_notification_token = response['push_notification_token']
+        self.push_notification_token = response.get('push_notification_token')
 
     @classmethod
     def list(cls, limit=None, starting_after=None):

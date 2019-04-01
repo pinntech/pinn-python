@@ -8,13 +8,28 @@ from .list import List
 
 
 class WebhookEndpoint(object):
-    """Methods to create, list, retrieve, update or delete users."""
+    """Webhook endpoint resource and interface.
 
-    OBJECT_NAME = 'webhookendpoint'
+    Attributes:
+        response (dict): Underlying dictionary response
+        object (str): Identifier for the resource
+        webhook_endpoint_id (str): Unique ID for the webhook endpoint
+        created_at (int): Unix timestamp in seconds for when the key was created
+        created_at (int): Unix timestamp in seconds for when the key was updated
+        status (str): The status of the webhook endpoint
+        url (str): Fully qualified endpoint URL where webhook events are delivered to
+        events (list): The list of events this webhook is subscribed to
+        livemode (bool): True if webhook endpoint is in live environment
+        secret (str): A secret to authenticate the enroll request from Pinn mobile SDK
+    """
+
+    OBJECT_NAME = 'webhook_endpoint'
     endpoint = '/v1/webhook_endpoints'
 
     def __init__(self, response):
         """Initialize a user model with an API response."""
+        self.response = response
+        self.object = response['object']
         self.webhook_endpoint_id = response['webhook_endpoint_id']
         self.created_at = response['created_at']
         self.updated_at = response['updated_at']
@@ -23,7 +38,6 @@ class WebhookEndpoint(object):
         self.events = response['events']
         self.livemode = response['livemode']
         self.secret = response['secret']
-        self.object = response['object']
 
     @classmethod
     def create(cls, url, events):

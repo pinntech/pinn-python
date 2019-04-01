@@ -11,13 +11,28 @@ from ..requester import Requester
 
 
 class User(object):
-    """Methods to create, list, retrieve, update or delete users."""
+    """User resource and interface.
+
+    Attributes:
+        response (dict): Underlying dictionary response
+        object (str): Identifier for the resource
+        user_id (str): Unique ID for the user
+        created_at (int): Unix timestamp in seconds for when the user was created
+        updated_at (int): Unix timestamp in seconds for when the user was last updated
+        authenticated_at (int): Unix timestamp in seconds for when the user last authenticated
+        device_enrolled (bool): True if the user has at least 1 enrolled device
+        left_palm_enrolled (bool): True if the user has enrolled their left palm
+        right_palm_enrolled (bool): True if the user has enrolled their right palm
+        metadata (dict): Arbitrary key/value data attached to the user
+    """
 
     OBJECT_NAME = 'user'
     endpoint = '/v1/users'
 
     def __init__(self, response):
         """Initialize a user model with an API response."""
+        self.response = response
+        self.object = response['object']
         self.user_id = response['user_id']
         self.created_at = response['created_at']
         self.updated_at = response['updated_at']
@@ -25,7 +40,6 @@ class User(object):
         self.device_enrolled = response['device_enrolled']
         self.left_palm_enrolled = response['left_palm_enrolled']
         self.right_palm_enrolled = response['right_palm_enrolled']
-        self.object = response['object']
         self.metadata = response['metadata']
 
     def __str__(self):
@@ -41,7 +55,19 @@ class User(object):
 
     @classmethod
     def create(cls, metadata=None):
-        """Create a new Pinn user."""
+        """Create a new Pinn user.
+
+        Args:
+            metadata (dict, optional): The ID of the Pinn user being authorized to enroll.
+
+        Returns:
+            User: The newly created user
+
+        Raises:
+            pinn.errors.RequestFailedError: Invalid metadata dict provided
+            pinn.errors.APIError: Internal server error
+            pinn.errors.APIConnectionError: API is unreachable [501-503]
+        """
         if metadata:
             data = {'metadata': metadata}
         else:
@@ -57,12 +83,38 @@ class User(object):
 
     @classmethod
     def retrieve(cls, user_id):
-        """Retrieve a user with a provided user ID."""
+        """Retrieve a Pinn user.
+
+        Args:
+            user_id (str): The ID of the Pinn user to query.
+
+        Returns:
+            User: A User resource
+
+        Raises:
+            pinn.errors.RequestFailedError: User not found
+            pinn.errors.APIError: Internal server error
+            pinn.errors.APIConnectionError: API is unreachable [501-503]
+        """
         return User(Requester.get(cls.endpoint + '/' + user_id))
 
     @classmethod
     def update(cls, user_id, metadata, status):
-        """Update the metadata for a user."""
+        """Update a Pinn user.
+
+        Args:
+            user_id (str): The ID of the Pinn user to update.
+            metadata (dict, optional): Metadata to update
+            status (str, optional): User status to update
+
+        Returns:
+            User: A User resource
+
+        Raises:
+            pinn.errors.RequestFailedError: User not found, Invalid metadata or status
+            pinn.errors.APIError: Internal server error
+            pinn.errors.APIConnectionError: API is unreachable [501-503]
+        """
         data = {}
         if metadata:
             data['metadata'] = metadata
@@ -72,7 +124,19 @@ class User(object):
 
     @classmethod
     def delete(cls, user_id):
-        """Delete a user with the given user ID."""
+        """Update a Pinn user.
+
+        Args:
+            user_id (str): The ID of the Pinn user to delete.
+
+        Returns:
+            bool: A Deleted response
+
+        Raises:
+            pinn.errors.RequestFailedError: User not found, Invalid metadata or status
+            pinn.errors.APIError: Internal server error
+            pinn.errors.APIConnectionError: API is unreachable [501-503]
+        """
         return Requester.delete(cls.endpoint + '/' + user_id)
 
     @classmethod
