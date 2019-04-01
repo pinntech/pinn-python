@@ -14,8 +14,6 @@ class IDToken(object):
     def verify(id_token, amr):
         """Verify a new incoming Pinn ID token value.
 
-        Extended description of function.
-
         Args:
             id_token (str): The ID Token received from a Pinn SDK
             amr (list): List of required authentication methods required

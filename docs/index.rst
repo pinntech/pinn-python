@@ -82,16 +82,6 @@ Finally listing resources in reverse chronological order::
 
     >>> pinn.User.list()
 
-Quickstart
-==========
-
-
-
-
-Handling Errors
-===============
-
-
 Production Checklist
 ====================
 
@@ -177,6 +167,9 @@ Errors
 
 Utilities
 ---------
+
+.. autoclass:: pinn.utils.IDToken
+    :members: verify
 
 Other
 -----

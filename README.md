@@ -16,7 +16,6 @@ provides an idiomatic, ORM-style usage that will make life easy.
 ## Table of Contents
 * [Installation](#installation)
 * [Documentation](#documentation)
-* [Usage](#usage)
 * [Changelog](#changelog)
 * [License](#license)
 
@@ -35,11 +34,6 @@ python setup.py install
 ## Documentation
 
 For a full run down of the library please see the reference documentation [here](https://pinn.readthedocs.io), or keep reading on for just the basics.
-
-## Usage
-
-This section details some of the most essential API actions and how to perform them using
-this library.
 
 ## Changelog
 
