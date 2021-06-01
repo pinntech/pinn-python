@@ -37,5 +37,5 @@ sphinxcontrib-qthelp==1.0.2
 sphinxcontrib-serializinghtml==1.1.1
 tqdm==4.31.1
 twine==1.13.0
-urllib3==1.24.1
+urllib3==1.26.5
 webencodings==0.5.1
